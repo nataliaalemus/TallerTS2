@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Series</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilo para el encabezado con el logotipo y título */
+        .header {
+            background-color: #008080;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+        }
+        .header img {
+            margin-right: 10px;
+            height: 30px;
+        }
+
+        /* Estilos de la tabla */
+        #seriesTable th {
+            background-color: #007bff;
+            color: white;
+        }
+        #seriesTable tbody tr:hover {
+            background-color: #f0f8ff;
+        }
+        #seriesTable tbody td a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        #seriesTable tbody td a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para el texto de promedio */
+        .average-text {
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: left; /* Alineado a la izquierda */
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado con logotipo y título -->
+    <div class="header">
+        <img src="https://dummyimage.com/30x30/000/fff.png&text=TV" alt="TV Series Logo">
+        <span>TV Series</span>
+    </div>
+
+    <div class="container mt-4">
+        <!-- Tabla para mostrar las series -->
+        <table class="table table-striped mt-4" id="seriesTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Channel</th>
+                    <th>Seasons</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <!-- Contenedor para el texto de promedio de temporadas -->
+        <div id="averageText" class="average-text"></div>
+
+        <!-- Contenedor para los detalles de la serie -->
+        <div id="seriesDetailCard" class="container mt-4"></div>
+    </div>
+
+    <!-- Cargar el archivo main.js como un módulo -->
+    <script src="scripts/main.js" type="module"></script>
+</body>
+</html>
